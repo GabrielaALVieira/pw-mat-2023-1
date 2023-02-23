@@ -30,10 +30,10 @@ console.log({h2, h3})
 //Problema: troca de valores entre variáveis (swap)
 
 let x = 5;
-let y = 10;
+let y = 10;  //pode ser let x = 5, y = 10
 
-console.log('Antes do swap:', {x, y});
-
+console.log('Antes do swap:', {x, y});   //É importante colocar o ; ao final do console
+ 
 //Swap
 // let aux = x
 // x = y
@@ -41,7 +41,7 @@ console.log('Antes do swap:', {x, y});
 
 //console.log('Depois de swap:', {x, y})
 
-//Swap usando desestruturação
+//Swap usando desestruturação. É importante colocar o ; ao final do console
 
 [x, y] = [y, x]
 console.log('Depois do swap:', {x, y});
