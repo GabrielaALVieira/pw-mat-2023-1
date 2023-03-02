@@ -5,7 +5,15 @@ const frutas = ['laranja', 'abacaxi', 'maçã', 'uva', 'jabuticaba', 'maracujá'
 //como parâmetro
 
 
-const negativos = numeros.filter(n=> n<0)
-const div5 = numeros.filter(i => i%5 ===0)
+const negativos = numeros.filter(n => n < 0)
+const div5 = numeros.filter(i => i % 5 === 0)
 
-console.log(`Primeira fruta começando com m: ` , fu)
+const comecaComM = frutas.filter(f => f.charAt(0) === 'm')
+const terminaComI = frutas.filter(x => x.slice(-1) === 'i')
+const terminaComR = frutas.filter(a => a.slice(-1) === 'r') //se não encontrar, retorna vetor vazio
+
+console.log('Números negativos:', negativos)
+console.log('Números divisíveis por 5:', div5)
+console.log('Frutas que começam com m:', comecaComM)
+console.log('Frutas que terminam com i:', terminaComI)
+console.log('Frutas que terminam com r:', terminaComR)
