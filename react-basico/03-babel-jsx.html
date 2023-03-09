@@ -41,7 +41,33 @@
 
         const div2 = <div className = 'formata'> Div criada com JSX+Babel</div>  //2 divs criadas de maneiras diferentes parece HTML essa linha e está no meio do JS
             //babel processa a linha de cima e transforma no código da div 1. Babel é um transpilador.
-        const container = React.createElement('div', null, [ div1, div2 ])
+        
+            
+        const classeCss = "formata"
+        const conteudo = 'Div criada com JSX+Babel e variáveis interpoladas'
+
+        //Para exibir  o conteúdo de variáveis dentro do JSX, usamos{}
+        const div3 = <div className={classeCss}>{conteudo}</div> //duas classes separadas classCss e conteudo e interpolou
+
+        //Criando um objeto de props
+        const props = {
+            className: 'formata',
+            children: 'Div criada com JSX+Babel e espalhamento de props' //children recheia a tag
+        }
+
+        //const div4 = <div {...props}></div> //somente tag de abertura e fechamento, nada no meio, pois o children é só colocado depois
+        const div4 = <div{...props}/> //qd não há nada no meio entre as tags de div, pode simplificar. Indica q nesse momento não há recheio(children)
+                                        //JSX não aceita tag solteira<>...então precisa fechar com />
+        //const container = React.createElement('div', null, [ div1, div2, div3, div4 ])
+        
+        //Container usando JSX
+        const container = 
+            <div>
+                {div1}
+                {div2}
+                {div3}
+                {div4}   
+            </div>    //as divs acima são variáveis e ficam entre {}. Pode ser uma na frente da outra, separada por espaço
 
         const root = ReactDOM.createRoot(document.getElementById('root'))
         root.render(container)
